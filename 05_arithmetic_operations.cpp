@@ -18,6 +18,13 @@ see is when a variable increments itself by the value of 1.
 String concatenation is the act of combining two strings together. 
 This is done with the + operator.
 
+Did you notice that you were able to subtract a bool from an int? 
+Recall that a bool of true is actually an integer of 1 and false 
+is actually 0. Thus, the system is able to add and subtract bools 
+and ints. In addition, assigning b which is of type int to 3.1 
+will force the variable to adopt the integer value of 3 instead. 
+Remember that all ints disregard decimal places.
+
 */
 #include <iostream>
 using namespace std;
@@ -65,8 +72,40 @@ int main(int argc, char** argv) {
     int m = 10;
     int n = 3;
     int o = m - n;
-    cout << c << endl;
+    cout << o << endl;
 
+    int p = 10;
+    p--;
+    cout << p << endl;
+
+    // division
+    double r = 25.0;
+    double s = 4.0;
+    printf("%f \n", r / s);
+
+    // modulo
+    int modulo = 5 % 2;
+    cout << modulo << endl;
+
+    // miltiplication
+    int t = 5;
+    int u = 10;
+    cout << t * u << endl;
+
+    // type casting
+    int numerator = 40;
+    int denominator = 25;
+    int number = 0;
+    cout << boolalpha << (bool) number << endl;
+    cout << numerator / denominator << endl;
+    cout << (double) numerator / denominator << endl;
+
+    // stoi()
+    int v = 5;
+    string w = "3";
+    string x = "3.14";
+    bool z = true;
+    cout << v + stoi(w) << endl;
 
   //add code above this line
   
